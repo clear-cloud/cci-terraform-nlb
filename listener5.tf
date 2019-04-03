@@ -18,7 +18,7 @@ resource "aws_alb_listener" "l5_alb_listener" {
 # -------------------
 resource "aws_lb_target_group" "l5_alb_target_group" {
   count    = "${var.listener5_alb_listener_port != "" ? 1 : 0}"
-  name     = "${var.name}-${var.environment}-tg-listener5-${var.listener3_svc_port}"
+  name     = "${var.name}-${var.environment}-tg-listener5-${var.listener5_svc_port}"
   port     = "${var.listener5_svc_port}"
   protocol = "${var.listener5_target_group_protocol}"
   vpc_id   = "${var.vpc_id}"
