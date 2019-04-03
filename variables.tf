@@ -39,15 +39,6 @@ variable "enable_cross_zone_load_balancing" {
   default = "true"
 }
 
-# Listener port and protocol need to match
-variable "alb_listener_port" {
-  default = "443"
-}
-
-variable "alb_listener_protocol" {
-  default = "HTTPS"
-}
-
 variable "healthy_threshold" {
   default = "4"
 }
@@ -63,6 +54,14 @@ variable "interval" {
 # -----------------------------
 # Listener 1 Variables 
 # -----------------------------
+variable "listener1_alb_listener_port" {
+  default = "80"
+}
+
+variable "listener1_alb_listener_protocol" {
+  default = "TCP"
+}
+
 variable "alb_listener1_port" {
   default = "80"
 }
