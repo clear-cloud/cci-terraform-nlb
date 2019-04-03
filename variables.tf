@@ -84,7 +84,7 @@ variable "listener1_svc_port" {
 }
 
 variable "listener1_target_group_protocol" {
-  default = "HTTP"
+  default = "TCP"
 }
 
 variable "listener1_success_codes" {
