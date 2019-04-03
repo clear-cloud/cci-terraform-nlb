@@ -26,7 +26,6 @@ resource "aws_lb_target_group" "l1_alb_target_group" {
     unhealthy_threshold = "${var.unhealthy_threshold}"
     timeout             = "${var.timeout}"
     interval            = "${var.interval}"
-    matcher             = "${var.listener1_success_codes}"
     protocol            = "${var.listener1_health_check_protocol}"
 
     path = "${var.target_group_path}"
@@ -35,7 +34,7 @@ resource "aws_lb_target_group" "l1_alb_target_group" {
   #stickiness {
   # enabled = "false" # NLBs have to have stickiness disabled
   #}
-   stickiness = []  # NLBs have to have stickiness disabled
+  stickiness = [] # NLBs have to have stickiness disabled
 }
 
 # -------------------

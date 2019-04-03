@@ -87,10 +87,6 @@ variable "listener1_target_group_protocol" {
   default = "TCP"
 }
 
-variable "listener1_success_codes" {
-  default = "200"
-}
-
 variable "listener1_target_id" {
   description = "ec2 instance(s) id to attach to listener1"
 }
