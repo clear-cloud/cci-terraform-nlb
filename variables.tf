@@ -64,7 +64,6 @@ variable "interval" {
   default = "10"
 }
 
-
 variable "target_group_path" {
   default = "/"
 }
@@ -85,4 +84,15 @@ variable "certificate_arn" {}
 
 variable "svc_port" {
   default = "80"
+}
+
+# -----------------------------
+# Listener Variables 
+# -----------------------------
+variable "alb_listener1_port" {
+  default = "80"
+}
+
+variable "alb_listener1_protocol" {
+  default = "HTTP"
 }

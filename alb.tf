@@ -17,7 +17,7 @@ resource "aws_lb" "alb" {
   # Tags
   #-----------------------------------------------------------------
   tags {
-    Name            = "${var.environment}_jenkins_ec2"
+    Name            = "${var.name}-${var.environment}"
     "Environment"   = "${var.environment}"
     "Contact"       = "${var.contact}"
     "Orchestration" = "${var.orchestration}"
