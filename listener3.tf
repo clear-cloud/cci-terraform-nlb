@@ -34,7 +34,7 @@ resource "aws_lb_target_group" "l3_alb_target_group" {
 }
 
 # -------------------
-# Listener2 - Target Group Attachment
+# Listener3 - Target Group Attachment
 # -------------------
 resource "aws_lb_target_group_attachment" "l3_target_group" {
   count            = "${var.listener3_target_id != "0" ? length(split(",", var.listener3_target_id)) : 0}"
@@ -42,9 +42,3 @@ resource "aws_lb_target_group_attachment" "l3_target_group" {
   target_id        = "${element(split(",",var.listener3_target_id), count.index)}"
   port             = "${var.listener3_svc_port}"
 }
-
-
-
-
-
-#count            = "${var.listener3_target_id != "0" ? length(split(",", var.listener3_target_id)) : 0}
