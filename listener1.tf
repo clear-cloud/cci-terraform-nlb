@@ -27,9 +27,13 @@ resource "aws_lb_target_group" "l1_alb_target_group" {
     timeout             = "${var.timeout}"
     interval            = "${var.interval}"
     matcher             = "${var.listener1_success_codes}"
-    protocol            = "${var.listener1_health_check_protocol}"   
+    protocol            = "${var.listener1_health_check_protocol}"
 
     path = "${var.target_group_path}"
+  }
+
+  stickiness {
+    enabled = "false" # NLBs have to have stickiness disabled
   }
 }
 
@@ -42,4 +46,3 @@ resource "aws_lb_target_group_attachment" "l1_target_group" {
   target_id        = "${element(split(",",var.listener1_target_id), count.index)}"
   port             = "${var.listener1_svc_port}"
 }
-
