@@ -128,6 +128,7 @@ variable "listener2_health_check_protocol" {
 # -----------------------------
 variable "listener3_alb_listener_port" {
   description = "Optional 3rd listener , set a value here to be created"
+  default = ""
 }
 
 variable "listener3_alb_listener_protocol" {
@@ -153,6 +154,7 @@ variable "listener3_target_group_protocol" {
 variable "listener3_target_id" {
   type        = "string"
   description = "ec2 instance(s) id to attach to listener1"
+  default = ""
 }
 
 variable "listener3_health_check_protocol" {
