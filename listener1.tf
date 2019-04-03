@@ -1,13 +1,13 @@
 # -------------------
 # Listener1
 # -------------------
-resource "aws_alb_listener" "alb_listener" {
+resource "aws_alb_listener" "l1_alb_listener" {
   load_balancer_arn = "${aws_lb.alb.arn}"
   port              = "${var.alb_listener_port}"
   protocol          = "${var.alb_listener_protocol}"
 
   default_action {
-    target_group_arn = "${aws_lb_target_group.alb_target_group.arn}"
+    target_group_arn = "${aws_lb_target_group.l1_alb_target_group.arn}"
     type             = "forward"
   }
 }
@@ -15,7 +15,7 @@ resource "aws_alb_listener" "alb_listener" {
 # -------------------
 # Listener1 - Target Group
 # -------------------
-resource "aws_lb_target_group" "alb_target_group" {
+resource "aws_lb_target_group" "l1_alb_target_group" {
   name     = "${var.name}-${var.environment}-target-group"
   port     = "${var.listener1_svc_port}"
   protocol = "${var.listener1_target_group_protocol}"
@@ -35,8 +35,10 @@ resource "aws_lb_target_group" "alb_target_group" {
 # -------------------
 # Listener1 - Target Group Attachment
 # -------------------
-resource "aws_lb_target_group_attachment" "test" {
-  target_group_arn = "${aws_lb_target_group.test.arn}"
-  target_id        = "${aws_instance.test.id}"
-  port             = 80
+resource "aws_lb_target_group_attachment" "l1_target_group" {
+  count            = "${length(split(",", var.listener1_target_id))}"
+  target_group_arn = "${aws_lb_target_group.l1_alb_target_group.arn}"
+  target_id        = "${element(split(",",var.listener1_target_id), count.index)}"
+  port             = "${var.listener1_svc_port}"
 }
+
