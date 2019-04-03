@@ -68,10 +68,6 @@ variable "target_group_path" {
   default = "/"
 }
 
-variable "success_codes" {
-  default = "200"
-}
-
 # -----------------------------
 # Listener 1 Variables 
 # -----------------------------
@@ -89,4 +85,8 @@ variable "listener1_svc_port" {
 
 variable "listener1_target_group_protocol" {
   default = "HTTP"
+}
+
+variable "listener1_success_codes" {
+  default = "200"
 }
