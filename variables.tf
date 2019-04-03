@@ -80,7 +80,7 @@ variable "success_codes" {
   default = "200"
 }
 
-variable "certificate_arn" {}
+#variable "certificate_arn" {}
 
 variable "svc_port" {
   default = "80"
