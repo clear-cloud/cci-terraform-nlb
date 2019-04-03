@@ -94,7 +94,7 @@ variable "listener2_alb_listener_port" {
 }
 
 variable "listener2_alb_listener_protocol" {
-  default = "TCP"
+  default = "TLS"
 }
 
 variable "alb_listener2_port" {
