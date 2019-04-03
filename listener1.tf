@@ -32,9 +32,10 @@ resource "aws_lb_target_group" "l1_alb_target_group" {
     path = "${var.target_group_path}"
   }
 
-  stickiness {
-    enabled = "false" # NLBs have to have stickiness disabled
-  }
+  #stickiness {
+  # enabled = "false" # NLBs have to have stickiness disabled
+  #}
+   stickiness = []  # NLBs have to have stickiness disabled
 }
 
 # -------------------
