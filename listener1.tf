@@ -24,7 +24,6 @@ resource "aws_lb_target_group" "l1_alb_target_group" {
   health_check {
     healthy_threshold   = "${var.healthy_threshold}"
     unhealthy_threshold = "${var.unhealthy_threshold}"
-    timeout             = "${var.timeout}"
     interval            = "${var.interval}"
     protocol            = "${var.listener1_health_check_protocol}"
   }

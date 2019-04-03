@@ -56,10 +56,6 @@ variable "unhealthy_threshold" {
   default = "4"
 }
 
-variable "timeout" {
-  default = "5"
-}
-
 variable "interval" {
   default = "10"
 }
