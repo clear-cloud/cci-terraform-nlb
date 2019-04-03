@@ -64,10 +64,6 @@ variable "interval" {
   default = "10"
 }
 
-variable "target_group_path" {
-  default = "/"
-}
-
 # -----------------------------
 # Listener 1 Variables 
 # -----------------------------

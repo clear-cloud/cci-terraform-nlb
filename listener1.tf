@@ -27,8 +27,6 @@ resource "aws_lb_target_group" "l1_alb_target_group" {
     timeout             = "${var.timeout}"
     interval            = "${var.interval}"
     protocol            = "${var.listener1_health_check_protocol}"
-
-    path = "${var.target_group_path}"
   }
 
   #stickiness {
