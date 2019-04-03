@@ -123,3 +123,40 @@ variable "listener2_target_id" {
 variable "listener2_health_check_protocol" {
   default = "TCP"
 }
+# -----------------------------
+# Listener 3 Variables
+# -----------------------------
+variable "listener3_alb_listener_port" {
+  description = "Optional 3rd listener , set a value here to be created"
+}
+
+variable "listener3_alb_listener_protocol" {
+  default = ""
+}
+
+variable "alb_listener3_port" {
+  default = ""
+}
+
+variable "alb_listener3_protocol" {
+  default = ""
+}
+
+variable "listener3_svc_port" {
+  default = ""
+}
+
+variable "listener3_target_group_protocol" {
+  default = "TCP"
+}
+
+variable "listener3_target_id" {
+  type        = "string"
+  description = "ec2 instance(s) id to attach to listener1"
+}
+
+variable "listener3_health_check_protocol" {
+  default = "TCP"
+}
+
+
