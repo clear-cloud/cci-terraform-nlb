@@ -5,7 +5,7 @@ resource "aws_alb_listener" "l5_alb_listener" {
   count             = "${var.listener5_alb_listener_port != "" ? 1 : 0}"
   load_balancer_arn = "${aws_lb.alb.arn}"
   port              = "${var.listener5_alb_listener_port}"
-  protocol          = "${var.listener_alb_listener_protocol}"
+  protocol          = "${var.listener5_alb_listener_protocol}"
 
   default_action {
     target_group_arn = "${aws_lb_target_group.l5_alb_target_group.arn}"
