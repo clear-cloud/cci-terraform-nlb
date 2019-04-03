@@ -6,6 +6,7 @@ Creates and ALB.
 * 2 listeners are created by default: 80 and 443.
 * There are 4 additional, optional, listener that can be deployed by uing a block such as:
 
+```
   # ----------
   # Listener3 - Optional, enabled by adding the below:
   # ----------
@@ -42,5 +43,5 @@ Creates and ALB.
   alb_listener6_protocol          = "TCP"
   listener6_target_id             = "i-02e70c5d7f33b04bc"
   listener6_svc_port              = "17551"
-
+```
  
