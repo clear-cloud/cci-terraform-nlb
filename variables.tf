@@ -144,7 +144,7 @@ variable "alb_listener3_protocol" {
 }
 
 variable "listener3_svc_port" {
-  default = ""
+  default = "80"
 }
 
 variable "listener3_target_group_protocol" {
