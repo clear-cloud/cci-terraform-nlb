@@ -117,7 +117,7 @@ variable "listener2_target_group_protocol" {
 
 variable "listener2_target_id" {
   type        = "string"
-  description = "ec2 instance(s) id to attach to listener1"
+  description = "ec2 instance(s) id to attach to listener2"
 }
 
 variable "listener2_health_check_protocol" {
@@ -153,7 +153,7 @@ variable "listener3_target_group_protocol" {
 
 variable "listener3_target_id" {
   type        = "string"
-  description = "ec2 instance(s) id to attach to listener1"
+  description = "ec2 instance(s) id to attach to listener3"
   default = "0"
 }
 
@@ -190,7 +190,7 @@ variable "listener4_target_group_protocol" {
 
 variable "listener4_target_id" {
   type        = "string"
-  description = "ec2 instance(s) id to attach to listener1"
+  description = "ec2 instance(s) id to attach to listener4"
   default = "0"
 }
 
@@ -198,4 +198,41 @@ variable "listener4_health_check_protocol" {
   default = "TCP"
 }
 
+# -----------------------------
+# Listener 5 Variables
+# -----------------------------
+variable "listener5_alb_listener_port" {
+  description = "Optional 5th listener , set a value here to be created"
+  default = ""
+}
+
+variable "listener5_alb_listener_protocol" {
+  default = ""
+}
+
+variable "alb_listener5_port" {
+  default = ""
+}
+
+variable "alb_listener5_protocol" {
+  default = ""
+}
+
+variable "listener5_svc_port" {
+  default = "80"
+}
+
+variable "listener5_target_group_protocol" {
+  default = "TCP"
+}
+
+variable "listener5_target_id" {
+  type        = "string"
+  description = "ec2 instance(s) id to attach to listener5"
+  default = "0"
+}
+
+variable "listener5_health_check_protocol" {
+  default = "TCP"
+}
 
