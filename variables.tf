@@ -68,31 +68,25 @@ variable "target_group_path" {
   default = "/"
 }
 
-variable "target_group_protocol" {
-  default = "HTTP"
-}
-
-variable "target_group_port" {
-  default = "443"
-}
-
 variable "success_codes" {
   default = "200"
 }
 
-#variable "certificate_arn" {}
-
-variable "svc_port" {
-  default = "80"
-}
-
 # -----------------------------
-# Listener Variables 
+# Listener 1 Variables 
 # -----------------------------
 variable "alb_listener1_port" {
   default = "80"
 }
 
 variable "alb_listener1_protocol" {
+  default = "HTTP"
+}
+
+variable "listener1_svc_port" {
+  default = "80"
+}
+
+variable "listener1_target_group_protocol" {
   default = "HTTP"
 }
