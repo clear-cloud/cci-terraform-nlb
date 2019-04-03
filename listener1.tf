@@ -16,7 +16,7 @@ resource "aws_alb_listener" "l1_alb_listener" {
 # Listener1 - Target Group
 # -------------------
 resource "aws_lb_target_group" "l1_alb_target_group" {
-  name     = "${var.name}-${var.environment}-target-group"
+  name     = "${var.name}-${var.environment}-target-group-listener1"
   port     = "${var.listener1_svc_port}"
   protocol = "${var.listener1_target_group_protocol}"
   vpc_id   = "${var.vpc_id}"
