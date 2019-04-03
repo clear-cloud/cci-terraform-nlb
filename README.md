@@ -4,7 +4,7 @@ Creates and ALB.
 # Usage Notes
 * Currently this module is used to created a Network load balancer "NLB"
 * 2 listeners are created by default: 80 and 443.
-* There are 4 additional, optional, listener that can be deployed by uing a block such as:
+* There are 4 additional, optional, listeners that can be deployed by using a block such as:
 
 ```
   # ----------
