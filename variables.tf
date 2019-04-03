@@ -93,3 +93,7 @@ variable "listener1_success_codes" {
 variable "listener1_target_id" {
   description = "ec2 instance(s) id to attach to listener1"
 }
+variable "listener1_health_check_protocol" {
+  default = "TCP"
+}
+
