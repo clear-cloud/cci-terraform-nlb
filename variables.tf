@@ -154,7 +154,7 @@ variable "listener3_target_group_protocol" {
 variable "listener3_target_id" {
   type        = "string"
   description = "ec2 instance(s) id to attach to listener1"
-  default = ""
+  default = "0"
 }
 
 variable "listener3_health_check_protocol" {
