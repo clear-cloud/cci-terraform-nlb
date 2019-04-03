@@ -10,7 +10,7 @@ variable "cidr_blocks" {
 variable "vpc_id" {}
 
 variable "load_balancer_type" {
-  default = "application"
+  default = "network"
 }
 
 variable "alb_allowed_ports" {

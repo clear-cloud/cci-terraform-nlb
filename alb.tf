@@ -6,7 +6,6 @@ resource "aws_lb" "alb" {
   name               = "${var.name}-${var.environment}"
   internal           = "${var.internal}"
   load_balancer_type = "${var.load_balancer_type}"
-  security_groups    = ["${aws_security_group.alb_sg.id}"]
 
   #subnets            = ["${var.subnetA}", "${var.subnetB}"]
   subnets = ["${var.subnets}"]
