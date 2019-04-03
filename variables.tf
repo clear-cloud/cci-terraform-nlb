@@ -79,6 +79,7 @@ variable "listener1_target_group_protocol" {
 }
 
 variable "listener1_target_id" {
+  type        = "string"
   description = "ec2 instance(s) id to attach to listener1"
 }
 
@@ -114,6 +115,7 @@ variable "listener2_target_group_protocol" {
 }
 
 variable "listener2_target_id" {
+  type        = "string"
   description = "ec2 instance(s) id to attach to listener1"
 }
 
