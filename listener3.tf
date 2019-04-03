@@ -2,7 +2,7 @@
 # Listener3
 # -------------------
 resource "aws_alb_listener" "l3_alb_listener" {
-  count             = "${var.listener3_alb_listener_port ? 1 : 0}"
+  count             = "${var.listener3_alb_listener_port != "" ? 1 : 0}"
   load_balancer_arn = "${aws_lb.alb.arn}"
   port              = "${var.listener3_alb_listener_port}"
   protocol          = "${var.listener3_alb_listener_protocol}"
@@ -17,7 +17,7 @@ resource "aws_alb_listener" "l3_alb_listener" {
 # Listener3 - Target Group
 # -------------------
 resource "aws_lb_target_group" "l3_alb_target_group" {
-  count    = "${var.listener3_alb_listener_port ? 1 : 0}"
+  count    = "${var.listener3_alb_listener_port != "" ? 1 : 0}"
   name     = "${var.name}-${var.environment}-tg-listener3-${var.listener3_svc_port}"
   port     = "${var.listener3_svc_port}"
   protocol = "${var.listener3_target_group_protocol}"
