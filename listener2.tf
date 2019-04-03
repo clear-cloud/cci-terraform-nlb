@@ -7,7 +7,7 @@ resource "aws_alb_listener" "l2_alb_listener" {
   protocol          = "${var.listener2_alb_listener_protocol}"
 
   default_action {
-    target_group_arn = "${aws_lb_target_group.l1_alb_target_group.arn}"
+    target_group_arn = "${aws_lb_target_group.l2_alb_target_group.arn}"
     type             = "forward"
   }
 }
@@ -28,9 +28,6 @@ resource "aws_lb_target_group" "l2_alb_target_group" {
     protocol            = "${var.listener1_health_check_protocol}"
   }
 
-  #stickiness {
-  # enabled = "false" # NLBs have to have stickiness disabled
-  #}
   stickiness = [] # NLBs have to have stickiness disabled
 }
 
