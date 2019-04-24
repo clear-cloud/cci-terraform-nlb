@@ -1,11 +1,5 @@
-variable "zone_id" {
-  default = ""
-}
-
-variable "friendly_name" {
-  default = "0"
-}
-
+variable "zone_id" {}
+variable "friendly_name" {}
 variable "subnets" {
   description = "A list of subnets to associate with the load balancer. e.g. ['subnet-1a2b3c4d','subnet-1a2b3c4e','subnet-1a2b3c4f']"
   type        = "list"
