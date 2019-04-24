@@ -3,7 +3,7 @@ variable "zone_id" {
 }
 
 variable "friendly_name" {
-  default = ""
+  default = "0"
 }
 
 variable "subnets" {
