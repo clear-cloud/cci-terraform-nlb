@@ -5,7 +5,7 @@ resource "aws_alb_listener" "l2_alb_listener" {
   load_balancer_arn = "${aws_lb.alb.arn}"
   port              = "${var.listener2_alb_listener_port}"
   protocol          = "${var.listener2_alb_listener_protocol}"
-
+  certificate_arn   = "${var.certificate_arn}"
   default_action {
     target_group_arn = "${aws_lb_target_group.l2_alb_target_group.arn}"
     type             = "forward"

@@ -1,3 +1,4 @@
+variable "certificate_arn" {}
 variable "zone_id" {}
 variable "friendly_name" {}
 variable "subnets" {
