@@ -42,7 +42,3 @@ resource "aws_lb_target_group_attachment" "l5_target_group" {
   target_id        = "${element(split(",",var.listener5_target_id), count.index)}"
   port             = "${var.listener5_svc_port}"
 }
-
-
-
-

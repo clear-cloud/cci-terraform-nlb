@@ -1,3 +1,11 @@
+variable "zone_id" {
+  default = ""
+}
+
+variable "friendly_name" {
+  default = ""
+}
+
 variable "subnets" {
   description = "A list of subnets to associate with the load balancer. e.g. ['subnet-1a2b3c4d','subnet-1a2b3c4e','subnet-1a2b3c4f']"
   type        = "list"
@@ -123,12 +131,13 @@ variable "listener2_target_id" {
 variable "listener2_health_check_protocol" {
   default = "TCP"
 }
+
 # -----------------------------
 # Listener 3 Variables
 # -----------------------------
 variable "listener3_alb_listener_port" {
   description = "Optional 3rd listener , set a value here to be created"
-  default = ""
+  default     = ""
 }
 
 variable "listener3_alb_listener_protocol" {
@@ -154,18 +163,19 @@ variable "listener3_target_group_protocol" {
 variable "listener3_target_id" {
   type        = "string"
   description = "ec2 instance(s) id to attach to listener3"
-  default = "0"
+  default     = "0"
 }
 
 variable "listener3_health_check_protocol" {
   default = "TCP"
 }
+
 # -----------------------------
 # Listener 4 Variables
 # -----------------------------
 variable "listener4_alb_listener_port" {
   description = "Optional 4th listener , set a value here to be created"
-  default = ""
+  default     = ""
 }
 
 variable "listener4_alb_listener_protocol" {
@@ -191,7 +201,7 @@ variable "listener4_target_group_protocol" {
 variable "listener4_target_id" {
   type        = "string"
   description = "ec2 instance(s) id to attach to listener4"
-  default = "0"
+  default     = "0"
 }
 
 variable "listener4_health_check_protocol" {
@@ -203,7 +213,7 @@ variable "listener4_health_check_protocol" {
 # -----------------------------
 variable "listener5_alb_listener_port" {
   description = "Optional 5th listener , set a value here to be created"
-  default = ""
+  default     = ""
 }
 
 variable "listener5_alb_listener_protocol" {
@@ -229,18 +239,19 @@ variable "listener5_target_group_protocol" {
 variable "listener5_target_id" {
   type        = "string"
   description = "ec2 instance(s) id to attach to listener5"
-  default = "0"
+  default     = "0"
 }
 
 variable "listener5_health_check_protocol" {
   default = "TCP"
 }
+
 # -----------------------------
 # Listener 6 Variables
 # -----------------------------
 variable "listener6_alb_listener_port" {
   description = "Optional 6th listener , set a value here to be created"
-  default = ""
+  default     = ""
 }
 
 variable "listener6_alb_listener_protocol" {
@@ -266,10 +277,9 @@ variable "listener6_target_group_protocol" {
 variable "listener6_target_id" {
   type        = "string"
   description = "ec2 instance(s) id to attach to listener6"
-  default = "0"
+  default     = "0"
 }
 
 variable "listener6_health_check_protocol" {
   default = "TCP"
 }
-
