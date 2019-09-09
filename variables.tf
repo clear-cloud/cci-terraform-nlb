@@ -1,3 +1,6 @@
+variable "ssl_policy" {
+  default = "ELBSecurityPolicy-2016-08"
+}
 variable "certificate_arn" {}
 variable "zone_id" {}
 variable "friendly_name" {}

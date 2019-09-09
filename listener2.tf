@@ -6,6 +6,7 @@ resource "aws_alb_listener" "l2_alb_listener" {
   port              = "${var.listener2_alb_listener_port}"
   protocol          = "${var.listener2_alb_listener_protocol}"
   certificate_arn   = "${var.certificate_arn}"
+  ssl_policy        = "${var.ssl_policy}"
   default_action {
     target_group_arn = "${aws_lb_target_group.l2_alb_target_group.arn}"
     type             = "forward"
